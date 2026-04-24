@@ -5,7 +5,7 @@ export const files = {
                 name: 'forge-sync-runtime',
                 type: 'module',
                 dependencies: {
-                    "nodemon" : "latest"
+                    "nodemon" : "^3.1.0" //using specific version
                 },
                 scripts: {
                     start: 'node index.js'
@@ -20,7 +20,6 @@ export const files = {
             process.stdin.on('data',(data) => {
             const sensorData = JSON.parse(data.toString())
             //logic written here will go in monacco
-            // 
             console.log("Processing sensor Data:", sensorData);
             })
             `
